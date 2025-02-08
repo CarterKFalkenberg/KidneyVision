@@ -1,0 +1,8 @@
+{
+    "dataset_name": "2025-2-8-Dataset_01",
+    "random_rotate": true, 
+    "random_pos": true, 
+    "blur_res": false, 
+    "resize_min": 0.5, 
+    "resize_max": 0.75
+}

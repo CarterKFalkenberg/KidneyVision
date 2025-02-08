@@ -1,0 +1,19 @@
+Config json file should include:
+
+* "dataset_name": Directory name in which the images and annotations will be stored. This
+should just be a name, not an absolute path
+* "random_rotate": Boolean. If true, crop will be randomly rotated (0 to 360 degrees) 
+* "random_pos": Boolean. If true, crop will be placed in a random part of the background 
+* "blur_res": Boolean. If true, the resulting image will have a Gaussian Blur applied to it 
+* OPTIONAL: "resize_min": Minimum resizing factor for crops. Defaulted to 1 if not specified.
+* OPTIONAL: "resize_max": Maximum resizing factor for crops. Defaulted to 1 if not specified.
+
+Example file:
+{
+    "dataset_name": "2025-2-8-Dataset_01",
+    "random_rotate": true, 
+    "random_pos": true, 
+    "blur_res": false, 
+    "resize_min": 0.5, 
+    "resize_max": 0.75
+}
