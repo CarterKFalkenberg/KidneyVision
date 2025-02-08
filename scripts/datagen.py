@@ -24,7 +24,7 @@ def resize(image: np.ndarray, factor: float) -> np.ndarray:
     new_width = int(image.shape[1] * factor)
 
     if image.shape[-1] == 4:  # GBRA
-        # Split the image into RGB and alpha channels and resize separately
+        # Split the image into GBR and alpha channels and resize separately
         image_gbr = image[:, :, :3]
         resized_gbr = cv2.resize(image_gbr, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
         
