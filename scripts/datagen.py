@@ -125,7 +125,7 @@ def get_segmentation_annotation(crop, scaling_factor: int = 0.001) -> List[Tuple
     # set all values to 0 if alpha channel is 0
     crop_bgr[crop[:, :, 3] == 0] = 0 
     
-    gray_crop = cv2.cvtColo(crop_bgr, cv2.COLOR_BGR2GRAY)
+    gray_crop = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2GRAY)
     _, binary_mask = cv2.threshold(gray_crop, 1, 255, cv2.THRESH_BINARY)
     contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contour = max(contours, key=cv2.contourArea)
